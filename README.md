@@ -1,6 +1,8 @@
 # astro6410
 
-This code take a query from the SDSS data release 16, cut on redshift (though not necessarily required), and runs Principal Component Analysis on the spectra. 
+The .txt file is the download_url file that is passed to wget to download the original query I made to the SDSS data bank. I contains the urls to retrieve the data for 4852 galaxies within the redshift range of 0.1 < z < 0.101.
+
+The code labeled SDSS_PCA utilizes from the SDSS data release 16, cut on redshift (though not necessarily required), and runs Principal Component Analysis on the spectra. 
 
 To get the data ready to be analyzed, I first converted all of the wavelengths to the rest frame by dividing by (1 + z). I then had to find the wavelength interval where all of the spectra overlap. After doing that, I cut each spectra on this interval. I ran PCA and plotted the mean as well as the first 4 components. The emission features are still a bit blurred, likely due to not considering the errors in redshift - though there could be other sources I haven't considered. 
 
